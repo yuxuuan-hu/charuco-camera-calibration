@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+build/
+dist/
+
+# Local calibration captures and generated reports.
+data/
+outputs/
+calibration_images/
+*.mp4
+*.avi
+
+# Editor and OS noise.
+.DS_Store
+.idea/
+.vscode/
