@@ -17,7 +17,7 @@ Python 3.10 or newer is recommended. The capture tool uses OpenCV GUI windows,
 so install the normal `opencv-contrib-python` package, not the headless build.
 
 ```bash
-git clone https://github.com/<your-user>/charuco-camera-calibration.git
+git clone https://github.com/yuxuuan-hu/charuco-camera-calibration
 cd charuco-camera-calibration
 
 python3 -m venv .venv
@@ -57,6 +57,8 @@ Move the board through the whole field of view: center, corners, edges, close,
 far, and tilted angles. Save frames only when many ChArUco corners are detected.
 For most cameras, 25 to 60 good images is a practical starting point.
 
+Note: For the board printed on A4 paper, the square size is currently 23.1 mm and the marker size is 17.35 mm.
+
 ```bash
 charuco-capture-images \
   --device /dev/video2 \
@@ -67,8 +69,8 @@ charuco-capture-images \
   --prefix wrist_charuco \
   --squares-x 7 \
   --squares-y 10 \
-  --square-mm 24 \
-  --marker-mm 18
+  --square-mm 23.1 \
+  --marker-mm 17.35
 ```
 
 Preview keys:
@@ -91,8 +93,8 @@ charuco-calibrate-camera \
   --out-dir outputs/wrist_charuco \
   --squares-x 7 \
   --squares-y 10 \
-  --square-mm 24 \
-  --marker-mm 18 \
+  --square-mm 23.1 \
+  --marker-mm 17.35 \
   --save-debug
 ```
 
